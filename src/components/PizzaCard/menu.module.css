@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* settings */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--siteback);
+    color: white;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --siteback: #1E0C00;
+    --background: linear-gradient(259deg,rgba(255, 100, 50, 1) 0%, rgba(255, 162, 40, 1) 100%);
+    --orange: #f89615
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1253px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px
+}
+
+h1 {
+    font-size: 69.17px;
+    margin-top: 0px;
+    margin-bottom: 48px;
+}
+
+.undertitlebtn {
+    display: flex;
+    gap: 24px;;
+}
+
+.searchbtn {
+    border: 0;
+    font-size: 20px;
+    line-height: 110%;
+    font-weight: 500;
+    border-radius: 100px;
+    padding: 20px 40px;
+    background: #210A01;
+    color: white;
+    box-shadow: 0px 0px 10px 1px #551a03;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.searchbtn:hover {
+    box-shadow: 0px 0px 20px 2px #722405;
+}
+
+.btnactive {
+    transform: scale(1.1) ;
+    background: var(--background);
+}
+
+.containerpizzacardcontainer {
+    display: flex;
+    gap: 22px;
+    margin-top: 110px;
+}
+
+.imgpizzab {
+    margin-top: 55px;
+}
+
+.containerpizzacardcontainer2 {
+    display: flex;
+    gap: 22px;
+    margin-top: 55px;
+    margin-bottom: 70px;
+}
