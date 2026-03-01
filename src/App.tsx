@@ -3,6 +3,7 @@ import Header from './components/Header/header'
 import Home from './components/home/home'
 import Menu from './components/PizzaCard/menu'
 import css from './styles/global.css'
+import Events from './components/EventsSection/events'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
       <Header />
       <Home />
       <Menu />
-  
+      <Events />
     </>
   )
 }
