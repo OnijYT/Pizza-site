@@ -1,9 +1,6 @@
 import styles from './pizzacards.module.css'
 import React, { useState } from 'react'
-import p1 from './img/p1.svg'
-import p2 from './img/p2.svg'
-import p3 from './img/p3.svg'
-import p4 from './img/p4.svg'
+
 
 interface props {
     description: string

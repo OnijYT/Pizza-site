@@ -26,5 +26,42 @@ html, body {
     margin-left: auto;
     padding: 0 15px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.containereventscart {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.eventstitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: end;
+}
+
+.eventstitle h1 {
+    font-size: 69.17px;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 6px;
+}
+
+.eventstitle span {
+    color: #A3A3A3;
+    margin: 0;
+}
+
+.containereventscartcenter {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.containereventscartbottom {
+    display: flex;
+    gap: 25px;
 }
