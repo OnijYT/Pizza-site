@@ -47,7 +47,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const found = prev.find(i => i.id === newItem.id && i.size === newItem.size)
 
             if (found) {
-                return prev.map(i => i === found ? {...i, count: i.count + newItem.count} : i)
+                return prev.map(i => 
+                    i.id === newItem.id && i.size === newItem.size 
+                        ? { ...i, count: i.count + newItem.count } 
+                        : i
+                );
             }
 
             return [...prev, newItem]

@@ -17,9 +17,11 @@ function App() {
         {/* ГЛАВНАЯ СТРАНИЦА (собираем все блоки здесь) */} 
         <Route path="/" element={
           <>
-            <Home />
-            <Menu />
-            <Events />
+            <div style={{paddingTop: '100px'}}>
+              <section id="home"><Home /></section>
+              <section id="menu"><Menu /></section>
+              <section id="events"><Events /></section>
+            </div>
           </>
         } />
 

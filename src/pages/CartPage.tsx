@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import style from './cartpage.module.css'
-import { useState } from "react";
+
 
 
 
@@ -32,7 +32,6 @@ const CartPage = () => {
                     <span>{item.count}</span>
                 <button onClick={() => plusbtn(item.id, item.size)}>+</button>
               </div>
-              
               <h5>Цена: {item.price * item.count}</h5>
             </div>
           </div>

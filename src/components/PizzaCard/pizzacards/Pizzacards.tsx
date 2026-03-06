@@ -38,6 +38,7 @@ const Pizzacards: React.FC<props> = ({id, description, img, price, title, sizes}
         }
 
         addtocart(item)
+        setCount(1)
 
         alert(`Addet to cart: ${title} (${sizes[activesize]}cm)`)
     }

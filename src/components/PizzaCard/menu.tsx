@@ -61,6 +61,7 @@ function Menu() {
                     {pizzas.map((obj) => (
                         <Pizzacards
                             key={obj.id}
+                            id={obj.id}
                             title={obj.title}
                             description={obj.description}
                             sizes={obj.sizes}
@@ -73,9 +74,10 @@ function Menu() {
                     <img src={p5} alt="" />
                 </div>
                 <div className={styles.containerpizzacardcontainer2}>
-                    {pizzas.map((obj) => (
+                    {pizzascard2.map((obj) => (
                         <Pizzacards
                             key={obj.id}
+                            id={obj.id}
                             title={obj.title}
                             description={obj.description}
                             sizes={obj.sizes}

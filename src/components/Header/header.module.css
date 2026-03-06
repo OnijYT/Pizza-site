@@ -16,7 +16,7 @@ html, body {
 }
 
 :root {
-    --siteback: #1E0C00;
+    --siteback: #1f0d01;
     --background: linear-gradient(259deg,rgba(255, 100, 50, 1) 0%, rgba(255, 162, 40, 1) 100%);
 }
 
@@ -37,15 +37,33 @@ ul {
     padding: 0 15px;
 }
 
-.header {
-    padding: 28px;
+header {
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 28px 0;
+}
+
+.header-big {
+  padding: 30px 0;
+  background: transparent;
+}
+
+.header-small {
+  padding: 20px 0;
+  background: #200e01;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.301);
 }
 
 .logo {
     cursor: pointer;
 }
 
-.header .container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,12 +100,88 @@ ul {
     font-size: 17.74px;
     font-weight: 500;
     padding: 11px 56px;
+    border: 0;
     color: white;
     border-radius: 50px;
     transition: all 0.4s;
+    cursor: pointer;
 }
 
 .btn:hover {
     font-size: 21px;
     opacity: 0.8;
+}
+
+.modaloverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modalcontent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 40px 40px;
+    background: #200e01;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+    font-weight: 800;
+    color: #77390d;
+}
+
+.close:hover {
+    color: rgba(255, 100, 50, 1);
+}
+
+.titlelogin {
+    display: flex;
+    justify-content: center;
+}
+
+.Loginsub {
+    margin-top: 40px;
+    border: 0;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;  
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.Loginsub:hover {
+    background: #351702;
+}
+
+.modalcontent input {
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    background: #180a01;
+    color: white;
+    font-weight: 500;
 }
