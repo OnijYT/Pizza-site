@@ -7,6 +7,7 @@ import Events from './components/EventsSection/events'
 import { Route, Routes } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import CartPage from './pages/CartPage'
+import { useEffect } from 'react'
 
 function App() {
 
