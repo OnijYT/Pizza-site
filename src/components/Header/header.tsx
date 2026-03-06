@@ -1,6 +1,8 @@
 import styles from './header.module.css'
 import React, { useState } from 'react'
 import logo from './img/pizzashop.svg'
+import { Link } from 'react-router-dom'
+import { useCart } from '../../context/CartContext'
 
 interface items {
     id: number
@@ -17,6 +19,8 @@ const Header = () => {
         { id: 2, name: 'Events', href: '#events'},
         { id: 3, name: 'About us', href: '#about'},
     ]
+
+    const {items, totalprice} = useCart()
 
     return (
         <header className={styles.header}>
@@ -37,6 +41,11 @@ const Header = () => {
                     </ul>
                 </nav>
                 <a href="" className={styles.btn}>Log in</a>
+                <Link to="/cart" className={styles.cartBtn}>
+                    <span>{totalprice.toFixed(2)} $</span>
+                    <div className={styles.delimiter}></div>
+                    <span>🛒 {items.length}</span>
+                </Link>
             </div>
         </header>
     )

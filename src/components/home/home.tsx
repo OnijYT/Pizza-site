@@ -28,11 +28,11 @@ function Home() {
                 </p>
                 <img src={pizzavideo} alt="" />
                 <div className={styles.conundervideo}>
-                    {btnitems.map((items, index) => (
+                    {btnitems.map((items, i) => (
                         <button
                         key={items.id}
-                        className={`${styles.btnp} ${active === index ? styles.activebtn : ''}`}
-                        onClick={() => setActive(index)}
+                        className={`${styles.btnp} ${active === i ? styles.activebtn : ''}`}
+                        onClick={() => setActive(i)}
                         >
                             {items.name}
                         </button>

@@ -1,5 +1,6 @@
 import styles from './pizzacards.module.css'
 import React, { useState } from 'react'
+import { useCart } from '../../../context/CartContext'
 
 
 interface props {
@@ -8,9 +9,10 @@ interface props {
     price: number[]
     title: string
     sizes: string[]
+    id: number
 }
 
-const Pizzacards: React.FC<props> = ({description, img, price, title, sizes}) => {
+const Pizzacards: React.FC<props> = ({id, description, img, price, title, sizes}) => {
 
     const [activesize, setActivesize] = useState<number>(0)
 
@@ -22,6 +24,24 @@ const Pizzacards: React.FC<props> = ({description, img, price, title, sizes}) =>
     const minuscount = () => {
         if (count > 1 ) setCount(prev => prev - 1)
     }
+
+    const { addtocart } = useCart()
+
+    const onclickbtn = () => {
+        const item = {
+            id,
+            title,
+            price: price[activesize],
+            size: sizes[activesize],
+            count,
+            img,
+        }
+
+        addtocart(item)
+
+        alert(`Addet to cart: ${title} (${sizes[activesize]}cm)`)
+    }
+
 
     return (
         <div className={styles.containercards}>
@@ -59,7 +79,7 @@ const Pizzacards: React.FC<props> = ({description, img, price, title, sizes}) =>
                 </div>
             </div>
             <div className={styles.order}>
-                <button className={styles.ordern}>Order Now</button>
+                <button onClick={onclickbtn} className={styles.ordern}>Order Now</button>
             </div>
         </div>
     )

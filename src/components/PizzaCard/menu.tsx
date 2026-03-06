@@ -8,6 +8,7 @@ import p4 from './pizzacards/img/p4.svg'
 import p5 from './img/Group 54.svg'
 
 
+
 interface item {
     id: number
     name: string
@@ -35,11 +36,13 @@ function Menu() {
     ]
 
     const pizzascard2 = [
-        {id: 4,title: 'Argentina', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', prices: [8.35, 10.50, 12.90], price: 7.35, img:p4},
-        {id: 5,title: 'Gribnaya', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [7.35, 10.50, 12.90], img:p4},
-        {id: 6,title: 'Tomato', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [9.35, 10.50, 13.90], img:p4},
-        {id: 7,title: 'Italian x2', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [8.35, 10.50, 13.90], img:p4},
+        {id: 4,title: 'Argentina', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [9.35, 11.50, 13.90], img:p4},
+        {id: 5,title: 'Gribnaya', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [7.35, 13.50, 12.90], img:p4},
+        {id: 6,title: 'Tomato', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [9.35, 11.50, 13.90], img:p4},
+        {id: 7,title: 'Italian x2', description: 'Filling: onion, potato, tomato, mushrooms, cheese, olives, meat...', sizes:[22, 28, 33], price: [8.35, 12.50, 13.90], img:p4},
     ]
+
+
 
     return (
         <>
